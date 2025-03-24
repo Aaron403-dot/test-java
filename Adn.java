@@ -35,23 +35,15 @@ public class Adn{
 			}*/
 
 			switch (ADN.charAt(i)) {
-					case 'A' :
-						_COUNT_A++;
-					break;
+					case 'A' -> _COUNT_A++;
 					
-					case 'G' :
-						_COUNT_G++;
-					break;
+					case 'G' -> _COUNT_G++;
 
-					case 'C' :
-						_COUNT_C++;
-					break;
+					case 'C' -> _COUNT_C++;
 					
-					case 'T' :
-						_COUNT_T++;
-					break;
-				default:
-					throw new AssertionError();
+					case 'T' -> _COUNT_T++;
+				
+				default -> throw new AssertionError();
 			}
 		
 		}
@@ -71,7 +63,7 @@ public class Adn{
 			if (i % 5 == 0) {
 				FB += "BUZZ";
 			}
-			if(FB != "")
+			if(!"".equals(FB))
 			{
 				System.out.println(FB);
 			}
@@ -79,6 +71,24 @@ public class Adn{
 				System.out.println(i);
 			}
 		}
+
+		EjercicioPrint01();
+		EjercicioPrint02();
+		EjercicioPrint03();
+		
+	}
+	
+	public static void EjercicioPrint01(){
+		System.out.println("Hello world");
+	}
+
+	public static void EjercicioPrint02(){
+		System.out.println("Estoy aprendiendo a programar\ny lo voy a conseguir.");
+	}
+
+	public static void EjercicioPrint03(){
+		System.out.print("Estoy aprendiendo a programar ");
+		System.out.print("y lo voy a conseguir.");
 
 	}
 	
