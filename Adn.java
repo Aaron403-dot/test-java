@@ -80,7 +80,11 @@ public class Adn{
 		EjercicioPrint01();
 		EjercicioPrint02();
 		EjercicioPrint03();
+		System.out.println("----------Ejercios de variable--------");
+		System.out.println("------------Avanzado-------------");
 		ejercicoAvanzadoVar();
+		System.out.println("----------- medio ----------------");
+		EjerccioIntermedio();
 
 	}
 	
@@ -129,21 +133,69 @@ public class Adn{
 	}
 
 	public static void ejercicoAvanzadoVar(){
-		Scanner _In_numero = new Scanner(System.in);
-		System.out.println("Introduzca un numero double [es decir un numero con decimal]");
-		String _varNumDec = _In_numero.nextLine();
-		double _DVNumDec =  Double.parseDouble(_varNumDec);
-		System.out.println(_DVNumDec);
-		int _IDVNumDec = (int)_DVNumDec;
-		System.out.println(_IDVNumDec + "\n------------\nparte 2 ej avanzado");
-		
-		//aun que de base no se puede hacer se puede hacer una micro operacion que trare true como 1 y false como 0 ya que aun que boolean deberia ser 1 o 0 se le suele tratar como u valor distinto
-		boolean _added = true;
-		int _Numeric = 1;
-		_Numeric += _added ? 1 : 0;
-		System.out.println(_Numeric);
-		
-		//convercion de double a 
+            try (Scanner _In_numero = new Scanner(System.in)) {
+                System.out.println("Introduzca un numero double [es decir un numero con decimal]");
+                String _varNumDec = _In_numero.nextLine();
+                double _DVNumDec =  Double.parseDouble(_varNumDec);
+                System.out.println(_DVNumDec);
+                int _IDVNumDec = (int)_DVNumDec;
+                System.out.println(_IDVNumDec + "\n------------\nparte 2 ej avanzado");
+                
+                //aun que de base no se puede hacer se puede hacer una micro operacion que trare true como 1 y false como 0 ya que aun que boolean deberia ser 1 o 0 se le suele tratar como u valor distinto
+                boolean _added = true;
+                int _Numeric = 1;
+                _Numeric += _added ? 1 : 0;
+                System.out.println(_Numeric);
+                
+                //convercion de double a byte
+                System.out.println("Numero double: " + _DVNumDec);
+                byte _bVNumDec = (byte)_DVNumDec;
+                System.out.println("Numero byte: " +_bVNumDec);
+                //Conversion float a int
+                
+                float FNumber = 123.23f;
+                System.out.println("Valor del número float: " + FNumber);
+                System.out.println("Valor del número redondeado: " + Math.round(FNumber));
+                int INumber = (int) Math.round(FNumber);
+                System.out.println("Valor del número convertido a int: " + INumber);
+                
+                //Conversor de temperatura
+                System.out.println("Introduzca una temperatura (En Celcius):");
+                String TempCels = _In_numero.nextLine();
+                
+                double DoubleCel =  Double.parseDouble(TempCels);
+                System.out.println("Celsius: " + DoubleCel);
+                // (°C × 9/5) + 32
+                System.out.println("Fahrenheit: " + (DoubleCel * 9/5)+32);
+                
+                System.out.println("Kelvin: " + (DoubleCel + 273.15));
+            }
+			catch(Exception e){
+				System.out.println("Introduzca un input valido");
+			}
 	}
+
+	public static void EjerccioIntermedio(){
+		System.out.println("EJERCICIO 1:");
+			int IPVariable1 = 24;
+			double DPVaribale2 = 23.4;
+			System.out.println(IPVariable1 + DPVaribale2);
+		System.out.println("EJERCICIO 2:");
+			String SPVariable3 = "igual tienes que hacer alguna transformaciónes a :";
+			SPVariable3 += IPVariable1+"";
+			System.out.println(SPVariable3);
+		System.out.println("EJERCICIO 3:");
+			char CPVariable4 = 'Q';
+			System.out.println(IPVariable1 + CPVariable4);
+		System.out.println("EJERCICIO 4:");
+			byte BPVariable5 = 127;
+			byte RBPVariable5 = BPVariable5++;
+			System.out.println(RBPVariable5);
+			System.out.println("no añade nada por que el limite de byte es 127");
+		System.out.println("EJERCICIO 5:");
+			long LPVariable = Long.MAX_VALUE;
+			System.out.println( (int) LPVariable);
+			System.out.println("Overflow = -1");
+		}
 
 }
