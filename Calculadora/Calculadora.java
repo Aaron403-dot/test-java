@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class Calculadora {
     
     public static void main(String[] args) {
-        
-        double Var1;
-        double Var2;
-        boolean looper = true;
-        Scanner IDNumero = new Scanner(System.in);
         try{
-            int Opcion = IDNumero.nextInt();
+            double Var1;
+            double Var2;
+            boolean looper = true;
+            Scanner IDNumero = new Scanner(System.in);
             while (looper) {
                 System.out.println("introduzca el tipo de operacion de calculo que desea");
                 System.out.println("[1]SUMA [2]RESTA [3]MULTIPLICACION [4]DIVISION [5]RESTOS [0]SALIR");
+                int Opcion = IDNumero.nextInt();
                 switch (Opcion) {
                     case 1:
                         System.out.println("Introduzca el primer valor");
@@ -56,11 +55,10 @@ public class Calculadora {
                         break;
                 }
             }
-            
-        }catch(Exception e){
-            System.err.println("Error Valor no valido");
-        }
-        IDNumero.close();
+            IDNumero.close();
+            }catch(Exception e){
+                System.err.println("Error Valor no valido");
+            }
     }
 
     private static double suma(double Var1, double Var2) {
