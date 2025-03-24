@@ -1,4 +1,7 @@
 
+import java.util.Scanner;
+
+
 
 
 public class Adn{
@@ -48,6 +51,8 @@ public class Adn{
 		
 		}
 
+		AdnEJ2();
+
 		System.out.println("Hay " + _COUNT_A + " de Adenina");
 		System.out.println("Hay " + _COUNT_C + " de Citocina");
 		System.out.println("Hay " + _COUNT_G + " de Guanina");
@@ -55,7 +60,7 @@ public class Adn{
 
 		System.out.println("-----------------------------\nEjercico de FizzBuzz\n");
 
-		for (int i = 1; i < 100; i++) {
+		for (int i = 1; i <= 100; i++) {
 			String FB = "";
 			if (i % 3 == 0) {
 				FB += "FIZZ";
@@ -75,7 +80,8 @@ public class Adn{
 		EjercicioPrint01();
 		EjercicioPrint02();
 		EjercicioPrint03();
-		
+		ejercicoAvanzadoVar();
+
 	}
 	
 	public static void EjercicioPrint01(){
@@ -91,5 +97,53 @@ public class Adn{
 		System.out.print("y lo voy a conseguir.");
 
 	}
-	
+
+	public static void AdnEJ2() {
+
+		String ADN1 = "ATGCGATACGCTTGA";
+		String ADN2 = "ATGCGATACGTGA";
+		String ADN3 = "ATTAATATGTACTGA";
+
+		System.out.println(calculoAdn(ADN1));
+		System.out.println(calculoAdn(ADN2));
+		System.out.println(calculoAdn(ADN3));
+
+
+	}
+
+	public static String calculoAdn(String Adn){
+
+		String Positivo;
+
+		if (Adn.length() % 3 == 0 && Adn.startsWith("ATG") && Adn.endsWith("TGA")) {
+			System.out.println("es una proteina");
+			Positivo = Adn;
+			return "la cadena \"" + Positivo + "\" es una proteina";
+		}
+		else{
+			System.out.println("no es una proteina");
+			return "la cadena \"" + Adn + "\" no es una proteina";
+		}
+
+		
+	}
+
+	public static void ejercicoAvanzadoVar(){
+		Scanner _In_numero = new Scanner(System.in);
+		System.out.println("Introduzca un numero double [es decir un numero con decimal]");
+		String _varNumDec = _In_numero.nextLine();
+		double _DVNumDec =  Double.parseDouble(_varNumDec);
+		System.out.println(_DVNumDec);
+		int _IDVNumDec = (int)_DVNumDec;
+		System.out.println(_IDVNumDec + "\n------------\nparte 2 ej avanzado");
+		
+		//aun que de base no se puede hacer se puede hacer una micro operacion que trare true como 1 y false como 0 ya que aun que boolean deberia ser 1 o 0 se le suele tratar como u valor distinto
+		boolean _added = true;
+		int _Numeric = 1;
+		_Numeric += _added ? 1 : 0;
+		System.out.println(_Numeric);
+		
+		//convercion de double a 
+	}
+
 }
