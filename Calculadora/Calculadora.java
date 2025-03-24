@@ -8,50 +8,55 @@ public class Calculadora {
         
         double Var1;
         double Var2;
+        boolean looper = true;
         Scanner IDNumero = new Scanner(System.in);
-        System.out.println("introduzca el tipo de operacion de calculo que desea");
-        System.out.println("[1]SUMA [2]RESTA [3]MULTIPLICACION [4]DIVISION [5]RESTOS [0]SALIR");
         try{
             int Opcion = IDNumero.nextInt();
-            switch (Opcion) {
-                case 1:
-                    System.out.println("Introduzca el primer valor");
-                    Var1 = IDNumero.nextDouble();
-                    System.out.println("Introduzca el segundo valor");
-                    Var2 = IDNumero.nextDouble();
-                    suma(Var1, Var2);
-                    break;
-                case 2:
-                    System.out.println("Introduzca el primer valor");
-                    Var1 = IDNumero.nextDouble();
-                    System.out.println("Introduzca el segundo valor");
-                    Var2 = IDNumero.nextDouble();
-                    resta(Var1, Var2);
-                    break;
-                case 3:
-                    System.out.println("Introduzca el primer valor");
-                    Var1 = IDNumero.nextDouble();
-                    System.out.println("Introduzca el segundo valor");
-                    Var2 = IDNumero.nextDouble();
-                    multi(Var1, Var2);
-                    break;
-                case 4:
-                    System.out.println("Introduzca el primer valor");
-                    Var1 = IDNumero.nextDouble();
-                    System.out.println("Introduzca el segundo valor");
-                    Var2 = IDNumero.nextDouble();
-                    division(Var1, Var2);
-                    break;
-                case 5:
-                    System.out.println("Introduzca el primer valor");
-                    Var1 = IDNumero.nextDouble();
-                    System.out.println("Introduzca el segundo valor");
-                    Var2 = IDNumero.nextDouble();
-                    restos(Var1, Var2);
-                    break;
-                default:
-                    break;
+            while (looper) {
+                System.out.println("introduzca el tipo de operacion de calculo que desea");
+                System.out.println("[1]SUMA [2]RESTA [3]MULTIPLICACION [4]DIVISION [5]RESTOS [0]SALIR");
+                switch (Opcion) {
+                    case 1:
+                        System.out.println("Introduzca el primer valor");
+                        Var1 = IDNumero.nextDouble();
+                        System.out.println("Introduzca el segundo valor");
+                        Var2 = IDNumero.nextDouble();
+                        suma(Var1, Var2);
+                        break;
+                    case 2:
+                        System.out.println("Introduzca el primer valor");
+                        Var1 = IDNumero.nextDouble();
+                        System.out.println("Introduzca el segundo valor");
+                        Var2 = IDNumero.nextDouble();
+                        resta(Var1, Var2);
+                        break;
+                    case 3:
+                        System.out.println("Introduzca el primer valor");
+                        Var1 = IDNumero.nextDouble();
+                        System.out.println("Introduzca el segundo valor");
+                        Var2 = IDNumero.nextDouble();
+                        multi(Var1, Var2);
+                        break;
+                    case 4:
+                        System.out.println("Introduzca el primer valor");
+                        Var1 = IDNumero.nextDouble();
+                        System.out.println("Introduzca el segundo valor");
+                        Var2 = IDNumero.nextDouble();
+                        division(Var1, Var2);
+                        break;
+                    case 5:
+                        System.out.println("Introduzca el primer valor");
+                        Var1 = IDNumero.nextDouble();
+                        System.out.println("Introduzca el segundo valor");
+                        Var2 = IDNumero.nextDouble();
+                        restos(Var1, Var2);
+                        break;
+                    default:
+                        looper = false;
+                        break;
+                }
             }
+            
         }catch(Exception e){
             System.err.println("Error Valor no valido");
         }
