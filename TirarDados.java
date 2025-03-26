@@ -8,7 +8,7 @@ public class TirarDados {
     public static void main(String[] args) {
         TirarDados TD = new TirarDados();
         List<Integer> ResultadosTiradas;
-        ResultadosTiradas = TD.LanzarDados(123);
+        ResultadosTiradas = TD.LanzarDados(9999999);
         TD.RegistrarResultados(ResultadosTiradas);
         TD.AnalizarResultados(ResultadosTiradas);
 
@@ -38,11 +38,11 @@ public class TirarDados {
         }
 
         for (int i = 2; i <= 12; i++) {
-            System.err.println("Ha salido el " + i + ": " + Contador[i] + GenerarAsteriscos(Contador[i]));
+            System.err.println("Ha salido el " + i + ": " + Contador[i]/* + GenerarAsteriscos(Contador[i])*/);
         }
 
-        Collections.sort(Lista);
-        System.out.println(Lista);
+       /*Collections.sort(Lista);
+        System.out.println(Lista);*/
     }
 
     private String GenerarAsteriscos(int GA)
