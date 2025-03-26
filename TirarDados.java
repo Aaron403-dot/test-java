@@ -8,7 +8,7 @@ public class TirarDados {
     public static void main(String[] args) {
         TirarDados TD = new TirarDados();
         List<Integer> ResultadosTiradas = new ArrayList<>();
-        ResultadosTiradas = TD.LanzarDados(23);
+        ResultadosTiradas = TD.LanzarDados(123);
         TD.RegistrarResultados(ResultadosTiradas);
         TD.AnalizarResultados(ResultadosTiradas);
 
