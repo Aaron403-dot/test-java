@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GestionProductos {
@@ -14,7 +13,7 @@ public class GestionProductos {
             int ExitCode = 1;
             Scanner Sc = new Scanner(System.in);
             while(ExitCode > 0){
-                String[] caja = new String[3];
+                String[] caja;
                 //limpiador de escaner
                 Sc = new Scanner(System.in);
                 System.out.println("Buenos dias que desea hacer hoy?");
@@ -71,7 +70,9 @@ public class GestionProductos {
                         ValorTotal = GP.Total(Precio);
                         System.out.println("El Valor total es de: " + ValorTotal);
                     }
-                    default -> ExitCode = 0;
+                    default -> {ExitCode = 0;
+                    Sc.close();
+                    }
                 }
             }
             
@@ -79,7 +80,7 @@ public class GestionProductos {
 
         
         } catch (Exception e) {
-            System.err.println("Excepcion: " + e.getMessage() + " " + e.getCause());
+            System.err.println("Excepcion: " + e.getMessage());
 
         }
     }
@@ -148,13 +149,13 @@ public class GestionProductos {
     {
         try {
             String NNombre;
-        int NCantidad = 0;
-        double NPrecio = 0;
+        int NCantidad;
+        double NPrecio;
         String[] caja = new String[3];
         sc.nextLine();
         System.out.println("Introduzca un nuevo nombre (Si desea mantener el viejo dejelo en blanco)");
         NNombre = sc.nextLine();
-        if(NNombre.equals("")||NNombre == null){
+        if(NNombre.equals("")){
             NNombre = VNombre;
         }
         System.out.println("Introduzca una nueva Cantidad (Si desea mantener el viejo dejelo en blanco)");
