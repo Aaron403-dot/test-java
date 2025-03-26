@@ -7,14 +7,14 @@ public class TirarDados {
     
     public static void main(String[] args) {
         TirarDados TD = new TirarDados();
-        List<Integer> ResultadosTiradas = new ArrayList<>();
+        List<Integer> ResultadosTiradas;
         ResultadosTiradas = TD.LanzarDados(123);
         TD.RegistrarResultados(ResultadosTiradas);
         TD.AnalizarResultados(ResultadosTiradas);
 
     }
 
-    private List LanzarDados(int NTiradas){
+    private List<Integer> LanzarDados(int NTiradas){
         List<Integer> ListaDados = new ArrayList<>();
         Random Dado = new Random();
         for (int i = 0; i < NTiradas; i++) {
