@@ -38,7 +38,7 @@ public class TirarDados {
         }
 
         for (int i = 2; i <= 12; i++) {
-            System.err.println("Ha salido el " + i + ": " + Contador[i]/* + GenerarAsteriscos(Contador[i])*/);
+            System.out.println("Ha salido el " + i + ": " + Contador[i]/* + GenerarAsteriscos(Contador[i])*/);
         }
 
        /*Collections.sort(Lista);

@@ -148,9 +148,10 @@ public class GestionProductosAlt {
         // }
         for (int i =0 ;i < NAB.length;i++) {
             if (NAB[i]!=null) {
-                if (NAB[i].getNombre().equals(Nombre)) {
+                if (NAB[i].getNombre().equalsIgnoreCase(Nombre)) {
                     existe = true;
                     Posicion=i;
+                    
                 }
             }
         }
