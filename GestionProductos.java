@@ -1,5 +1,4 @@
 
-import java.awt.Canvas;
 import java.util.Scanner;
 
 public class GestionProductos {
@@ -42,7 +41,7 @@ public class GestionProductos {
                     case "2" -> GP.lista(Nombre, Cantidad, Precio, Pointer);
 
                     case "3" -> {
-                                int PosicionGuardada = 0;
+                                int PosicionGuardada;
                                 PosicionGuardada = GP.Buscar(Sc, Nombre);
                                 if (PosicionGuardada > -1) {
                                     System.out.println("------Producto-------");
@@ -54,7 +53,7 @@ public class GestionProductos {
                             }
 
                     case "4" -> {
-                                int PosicionGuardada = 0;
+                                int PosicionGuardada;
                                 PosicionGuardada = GP.Buscar(Sc, Nombre);
                                 if (PosicionGuardada>-1) {
                                     caja = GP.Modificar(Sc, Nombre[PosicionGuardada], Cantidad[PosicionGuardada], Precio[PosicionGuardada]);
@@ -77,10 +76,6 @@ public class GestionProductos {
                     }
                 }
             }
-            
-
-
-        
         } catch (Exception e) {
             System.err.println("Excepcion: " + e.getMessage());
 
@@ -130,7 +125,7 @@ public class GestionProductos {
         {return -1;
         }
         for (int i = 0; i < NAB.length; i++) {
-            if (!NAB.equals(null) && NAB[i] != null) {
+            if (NAB[i] != null) {
                 if (NAB[i].equals(Nombre)) {
                     Posicion = i;
                     existe = true;
