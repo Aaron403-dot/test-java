@@ -1,4 +1,5 @@
 
+import java.awt.Canvas;
 import java.util.Scanner;
 
 public class GestionProductos {
@@ -67,11 +68,12 @@ public class GestionProductos {
                     }
                     case "5" -> {
                         double ValorTotal;
-                        ValorTotal = GP.Total(Precio);
+                        ValorTotal = GP.Total(Precio,Cantidad);
                         System.out.println("El Valor total es de: " + ValorTotal);
                     }
                     default -> {ExitCode = 0;
                     Sc.close();
+                    System.out.println("Adios");
                     }
                 }
             }
@@ -184,10 +186,15 @@ public class GestionProductos {
         
     }
 
-    private double Total(double[] Valor){
+    private double Total(double[] Valor, int[] cantidad){
         double VTotal = 0;
+        int contador = 0;
         for (double d : Valor) {
             VTotal += d;
+            if (cantidad[contador]>0) {
+                VTotal *= cantidad[contador];
+            }
+            contador++;
         }
         return VTotal;
     }
