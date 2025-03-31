@@ -244,15 +244,8 @@ private Politico[] AdminTools(Scanner sc,Politico[] politicos, String Password)
         }
     }
     boolean lock = true;
-    // Console console = System.console();
-    // if (console == null) {
-    //     System.err.println("Error desconcido");
-    //     return politicos;
-    // }
     
     sc = new Scanner(System.in);
-    //String Password = LeerPassword("Introduza la contraseña");
-    // String Password = console.readPassword().toString();
     if(PasswordString.equals(Password))
     {
         
