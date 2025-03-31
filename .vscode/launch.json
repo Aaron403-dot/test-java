@@ -1,0 +1,144 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Adn",
+            "request": "launch",
+            "mainClass": "Adn",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "Calculadora",
+            "request": "launch",
+            "mainClass": "Calculadora.Calculadora",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "GestionDeVotacies",
+            "request": "launch",
+            "mainClass": "GestionDeVotacies",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "GestionProductos",
+            "request": "launch",
+            "mainClass": "GestionProductos",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "GestionProductosAlt",
+            "request": "launch",
+            "mainClass": "GestionProductosAlt",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "NotasEstadisticas",
+            "request": "launch",
+            "mainClass": "NotasEstadisticas",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "TirarDados",
+            "request": "launch",
+            "mainClass": "TirarDados",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "basicodejava",
+            "request": "launch",
+            "mainClass": "basicodejava",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "tienda",
+            "request": "launch",
+            "mainClass": "tienda",
+            "projectName": "test-java_24b2d16f"
+        },
+        {
+            "type": "java",
+            "name": "Adn(1)",
+            "request": "launch",
+            "mainClass": "Adn",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
+            "name": "Calculadora(1)",
+            "request": "launch",
+            "mainClass": "Calculadora.Calculadora",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
+            "name": "GestionDeVotacies(1)",
+            "request": "launch",
+            "mainClass": "GestionDeVotacies",
+            "projectName": "test-java",
+            "args":
+            [
+                "MeatLoversPizza"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "GestionProductos(1)",
+            "request": "launch",
+            "mainClass": "GestionProductos",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
+            "name": "GestionProductosAlt(1)",
+            "request": "launch",
+            "mainClass": "GestionProductosAlt",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
+            "name": "NotasEstadisticas(1)",
+            "request": "launch",
+            "mainClass": "NotasEstadisticas",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
+            "name": "TirarDados(1)",
+            "request": "launch",
+            "mainClass": "TirarDados",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
+            "name": "basicodejava(1)",
+            "request": "launch",
+            "mainClass": "basicodejava",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
+            "name": "tienda(1)",
+            "request": "launch",
+            "mainClass": "tienda",
+            "projectName": "test-java"
+        }
+    ]
+}

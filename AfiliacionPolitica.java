@@ -3,5 +3,5 @@ enum AfiliacionPolitica {
     Derecha,
     Centro,
     Ultra_Izquierda,
-    Ultra_derecha
+    Ultra_Derecha
 }
