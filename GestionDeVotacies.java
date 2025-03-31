@@ -613,7 +613,7 @@ private Politico[] Modificar(Politico[] politicos, Scanner sc)
 
 
 
-    /*--------------------------Separador de funciones internas---------------------------------------------------------------- */
+    /*--------------------------Separador de funciones internas----------------------------------------------------------------- */
     private String EleccionExceptions(Politico p)
     {   
         try {
