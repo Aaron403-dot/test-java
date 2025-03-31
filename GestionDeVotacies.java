@@ -639,30 +639,11 @@ private Politico[] Modificar(Politico[] politicos, Scanner sc)
 
     private Politico[] comparador(Politico[] politicos)
     {
-        // Politico[] sortpolitico = new Politico[politicos.length];
-        // // Politico left = null;
-        // // Politico right = null;
         Politico placeholder;
-        // for (int i = 0; i < politicos.length; i++) {
-        //     // if (politicos[i].getVotos() > left.getVotos() && left == null) {
-        //     //     left = politicos[i];
-        //     //     sortpolitico[i] = left;
-        //     // }
-        //     // else{
-        //     //     if (politicos[i].getVotos() < right.getVotos() && right == null) {
-        //     //         right = politicos[i];
-        //     //         sortpolitico[i] = right;
-        //     //     }
-        //     // }
-               
-
-            
-        // }
 
         for (int i = 0; i < politicos.length - 1; i++) {
             for (int j = 0; j < politicos.length - 1 - i; j++) {
                 if (politicos[j].getVotos() < politicos[j + 1].getVotos()) {
-                    // Intercambiar array[j] y array[j + 1]
                     placeholder = politicos[j];
                     politicos[j] = politicos[j + 1];
                     politicos[j + 1] = placeholder;
