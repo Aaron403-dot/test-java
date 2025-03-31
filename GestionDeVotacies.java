@@ -162,18 +162,21 @@ private void Calcular(Politico[] politicos){
 
     int total = 0;
 
-    double porcentaje = 0.0;
+    double porcentaje = 0.000000000000;
 
     politicos = comparador(politicos);
 
     System.out.println(politicos[0].getNombre() + ": Tiene mas votos");
     System.out.println(politicos[2].getNombre() + ": Tiene menos votos");
     for (Politico p : politicos) {
-        total =+ p.getVotos();
+        total += p.getVotos();
     }
     for (Politico p : politicos) {
-        porcentaje = (p.getVotos()/total)*100;  
+        if (p.getVotos()>0) {
+            porcentaje = p.getVotos()*100/total; 
+        }
         System.out.println(p.getNombre() + " tiene actualmente: " + porcentaje + "% de votos"); 
+        porcentaje = 0.0;
     }
 }
 
@@ -636,23 +639,37 @@ private Politico[] Modificar(Politico[] politicos, Scanner sc)
 
     private Politico[] comparador(Politico[] politicos)
     {
-        Politico[] sortpolitico = new Politico[politicos.length];
-        Politico left = null;
-        Politico right = null;
-        for (int i = 0; i < politicos.length; i++) {
-            if (politicos[i].getVotos() > left.getVotos() || left == null) {
-                left = politicos[i];
-                sortpolitico[i] = left;
-            }
-            else{
-                if (politicos[i].getVotos() < right.getVotos() || right == null) {
-                    right = politicos[i];
-                    sortpolitico[i] = right;
+        // Politico[] sortpolitico = new Politico[politicos.length];
+        // // Politico left = null;
+        // // Politico right = null;
+        Politico placeholder;
+        // for (int i = 0; i < politicos.length; i++) {
+        //     // if (politicos[i].getVotos() > left.getVotos() && left == null) {
+        //     //     left = politicos[i];
+        //     //     sortpolitico[i] = left;
+        //     // }
+        //     // else{
+        //     //     if (politicos[i].getVotos() < right.getVotos() && right == null) {
+        //     //         right = politicos[i];
+        //     //         sortpolitico[i] = right;
+        //     //     }
+        //     // }
+               
+
+            
+        // }
+
+        for (int i = 0; i < politicos.length - 1; i++) {
+            for (int j = 0; j < politicos.length - 1 - i; j++) {
+                if (politicos[j].getVotos() < politicos[j + 1].getVotos()) {
+                    // Intercambiar array[j] y array[j + 1]
+                    placeholder = politicos[j];
+                    politicos[j] = politicos[j + 1];
+                    politicos[j + 1] = placeholder;
                 }
             }
         }
-
-        return sortpolitico;
+        return politicos;
     }
 
     private static boolean esNumero(String NumOLet)
@@ -663,26 +680,6 @@ private Politico[] Modificar(Politico[] politicos, Scanner sc)
         NumberFormat.getInstance().parse(NumOLet,Lugar);
         //Positivo si el tamaño del lugar es igual a la posicion actual del analizador
         return NumOLet.length() == Lugar.getIndex();
-    }
-
-    private String LeerPassword(String mensaje)
-    {
-        char caracter = ' ';
-        System.out.println(mensaje);
-        StringBuilder Contraseña = new StringBuilder();
-        try {
-            while (caracter != '\n') {
-                caracter = (char) System.in.read();
-                if (caracter != '\r') {
-                    Contraseña.append(caracter);
-                    System.out.print("*");
-                }
-            }
-            
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return Contraseña.toString().concat(" ");
     }
 
 
