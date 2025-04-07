@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "B_BucleArrayList",
+            "request": "launch",
+            "mainClass": "B_BucleArrayList",
+            "projectName": "test-java"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -92,11 +99,7 @@
             "name": "GestionDeVotacies(1)",
             "request": "launch",
             "mainClass": "GestionDeVotacies",
-            "projectName": "test-java",
-            // "args":
-            // [
-            //     "MeatLoversPizza"
-            // ]
+            "projectName": "test-java"
         },
         {
             "type": "java",
