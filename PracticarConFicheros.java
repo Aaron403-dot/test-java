@@ -1,8 +1,6 @@
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.FilterWriter;
 import java.text.NumberFormat;
 import java.text.ParsePosition;
 import java.util.Scanner;
