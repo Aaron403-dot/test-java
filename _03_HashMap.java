@@ -1,5 +1,4 @@
 import java.lang.reflect.Array;
-import java.text.ListFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -93,11 +92,13 @@ public class _03_HashMap {
     {
         String frase = "me estoy peleando con HashMap y hashmap esta perdiendo la pelea";
         int NumerodeEspacios = 0;
+        int index=1;
         HashMap<Integer, Character> mapa = new HashMap<>();
         for(int i = 0; i < frase.length(); i++){
             char letra = frase.charAt(i);
             if (letra != ' '){
-                mapa.put(i, letra);
+                mapa.put(index, letra);
+                index++;
             }
             else{
                 NumerodeEspacios++;
