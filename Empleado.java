@@ -1,6 +1,6 @@
 import java.util.EmptyStackException;
 
-public class Empleado {
+public class Empleado implements Comparable {
 	
 	private String Nombre;
 	private int Edad;
@@ -48,6 +48,14 @@ public class Empleado {
 		return "Empleado [Nombre=" + Nombre + ", Edad=" + Edad + ", Salario=" + Salario + "]";
 	}
 	
+
+	@Override
+	public int compareTo(Object o) {
+		// Metodo autogenerado
+		int compareage=((Empleado)o).getEdad();
+        /* ordena de forma ascendente*/
+        return this.getEdad()-compareage;
+	}
 	
 	
 }
